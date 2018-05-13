@@ -95,7 +95,8 @@ print('hello world')
 編集が終わったら以下のコマンドで実行します。
 python hello_world.py
 
-##　おまけ
+## おまけ
+
 
 以下を入力してREPLを起動します。
 ```
