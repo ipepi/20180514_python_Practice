@@ -53,7 +53,7 @@ pyenv global 3.6.5
 http://servernameis.xsrv.jp/CryptoCurrencyAutoTrader/2018/03/24/cloud9-changepython3/
 
 ```
-pyenv versions
+python --version
 ```
 
 `which python`を入力すると`python='python27'`とAliasがはいっています。これはCloud9の設定のため、'.bashrc'で定義されているAlias設定を消します。
@@ -81,16 +81,19 @@ cd myapp
 ```
 
 ```
-touch helloWorld.py
+touch hello_world.py
 ```
 
 viコマンドで以下のように編集します。
 
-```python:helloWorld.py
+```python:hello_world.py
 
 #! python
-print('hello world');
+print('hello world')
 ```
+
+編集が終わったら以下のコマンドで実行します。
+python hello_world.py
 
 ##　おまけ
 
@@ -99,7 +102,7 @@ print('hello world');
 python
 ```
 
-以下を入力します。
+以下を入力します。pythonの心得が表示されます。
 ```
 import this
 ```
