@@ -1,4 +1,3 @@
-# 20180514_python_Practice
 # Python3勉強会
 ## 環境づくり
 OS環境が異なることもあり、前回好評だったCloud9で環境と立ち上げて下さい。手順は割愛します。
@@ -62,3 +61,4 @@ vi .bashrc
 ```
 
 「AWS Cloud9」の「Preference」を開き「Python Support」のPython Versionを'Python3'に変更します。
+
