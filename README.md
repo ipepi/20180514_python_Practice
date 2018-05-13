@@ -3,7 +3,7 @@
 ## 環境づくり
 OS環境が異なることもあり、前回好評だったCloud9で環境と立ち上げて下さい。手順は割愛します。
 
-以下のコマンドを入力してみると`Python 2.7.13`と表示されます。これはデフォルトで入っているpythonのバージョンです。今回はpython3を対象としているのでpython3をインストールしていきます。python2とpython3は記法も異なるので別のものと考えておいて下さい。
+以下のコマンドを入力してみると`Python 2.7.13`と表示されます。これはデフォルトで入っているpythonのバージョンです。今回はpython3を対象としているのでpython3をインストールしていきます。ちまたでpythonとよく聞きますがpython2とpython3の二種類があり記法も異なるので注意して下さい。
 
 ```
 python --version
@@ -84,7 +84,7 @@ cd myapp
 touch helloWorld.py
 ```
 
-viコマンドで以下のように編集します。一行目はシバンです。
+viコマンドで以下のように編集します。
 
 ```python:helloWorld.py
 
@@ -93,6 +93,7 @@ print('hello world');
 ```
 
 ##　おまけ
+
 以下を入力してREPLを起動します。
 ```
 python
@@ -102,5 +103,3 @@ python
 ```
 import this
 ```
-
-import this
