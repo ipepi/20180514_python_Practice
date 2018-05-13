@@ -70,15 +70,37 @@ vi .bashrc
 
 ```
 cd /home/ec2-user/environment/
+```
+
+```
 mkdir myapp
+```
+
+```
 cd myapp
+```
+
+```
 touch helloWorld.py
 ```
 
-viコマンドで以下のようにします。一行目はシバンです。
+viコマンドで以下のように編集します。一行目はシバンです。
 
 ```python:helloWorld.py
+
 #! python
 print('hello world');
-
 ```
+
+##　おまけ
+以下を入力してREPLを起動します。
+```
+python
+```
+
+以下を入力します。
+```
+import this
+```
+
+import this
