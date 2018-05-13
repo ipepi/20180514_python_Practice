@@ -1,4 +1,5 @@
 # Python3勉強会
+
 ## 環境づくり
 OS環境が異なることもあり、前回好評だったCloud9で環境と立ち上げて下さい。手順は割愛します。
 
@@ -48,6 +49,8 @@ pyenv global 3.6.5
 
 `３．６．５`に変更されていることを確認して、これで準備OK！！！
 と言いたいところですが以下のコマンドを実行すると`Python 2.7.13`のままになっています。
+これはcloud9の設定のようです。
+http://servernameis.xsrv.jp/CryptoCurrencyAutoTrader/2018/03/24/cloud9-changepython3/
 
 ```
 pyenv versions
@@ -62,3 +65,20 @@ vi .bashrc
 
 「AWS Cloud9」の「Preference」を開き「Python Support」のPython Versionを'Python3'に変更します。
 
+## Hello Worldの出力
+以下のコマンドを実行し'helloWorld.py'ファイルを作成します。
+
+```
+cd /home/ec2-user/environment/
+mkdir myapp
+cd myapp
+touch helloWorld.py
+```
+
+viコマンドで以下のようにします。一行目はシバンです。
+
+```python:helloWorld.py
+#! python
+print('hello world');
+
+```
