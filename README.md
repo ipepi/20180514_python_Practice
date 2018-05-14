@@ -107,3 +107,35 @@ python
 ```
 import this
 ```
+
+## WEBスクレイピング
+
+pipコマンドでbeautifulsoup4,requestsをインストールします。
+```
+pip install beautifulsoup4
+pip install requests
+```
+
+インストールが終わったら以下のpythonファイルを作成します。
+
+```python:question1.py
+#! python3
+# google検索で上位の結果のURLを取得する
+import requests, sys, bs4
+
+print('GooGling...')
+res = requests.get('http://google.com/search?q=' + ' '.join(sys.argv[1:]))
+res.raise_for_status()
+
+soup = bs4.BeautifulSoup(res.text)
+link_elems = soup.select('.r a')
+
+num_open = min(5, len(link_elems))
+for i in range(num_open):
+    print(link_elems[i].get('href'))
+```
+以下のコマンドで検索結果を取得することができます。※seleniumが使えればprint部分をリンクで開く設定にすれば、複数ページを開くことができる。
+
+```
+python question1.py <検索したい言葉>
+```
