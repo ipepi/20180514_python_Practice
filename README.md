@@ -116,7 +116,7 @@ pip install beautifulsoup4
 pip install requests
 ```
 
-インストールが終わったら以下のpythonファイルを作成します。
+インストールが終わったら以下のquestion1ファイルを作成します。
 
 ```python:question1.py
 #! python3
