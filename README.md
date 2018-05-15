@@ -132,7 +132,7 @@ link_elems = soup.select('.r a')
 
 num_open = min(5, len(link_elems))
 for i in range(num_open):
-    print(link_elems[i].get('href'))
+    print('http://google.com' + link_elems[i].get('href')))
 ```
 以下のコマンドで検索結果を取得することができます。※seleniumが使えればprint部分をリンクで開く設定にすれば、複数ページを開くことができる。
 
