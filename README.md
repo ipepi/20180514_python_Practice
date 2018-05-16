@@ -139,3 +139,54 @@ for i in range(num_open):
 ```
 python question1.py <検索したい言葉>
 ```
+
+# 天気予報取得
+以下のサイトより天気予報を取得して表示します。
+<http://weather.livedoor.com/weather_hacks/webservice>
+
+```python:weather.py
+#!python3
+# coding: utf-8
+
+import requests
+import json
+
+url = 'http://weather.livedoor.com/forecast/webservice/json/v1'
+city = {'city': '130010'} # Tokyo
+data = requests.get(url, params = city).json()
+print(data['title'])
+for weather in data['forecasts']:
+    print(weather['dateLabel'] + ':' + weather['telop'])
+```
+
+## カウントダウンで処理実行
+3秒毎に経過時間を出力するスクリプトです。
+
+```python:countdown.py
+import time,subprocess,sys
+
+time_left = 3
+while time_left > 0:
+    print(time_left, end='')
+    time.sleep(1)
+    time_left = time_left - 1
+    print('秒経ちました')
+```
+実行できたなら、3秒後にquestion2.pyを実行するように改良します。
+
+```python:countdown.py
+#! python3
+#　3秒後にquestion2.pyを実行するスクリプト
+
+import time,subprocess,sys
+
+time_left = 3
+while time_left > 0:
+    time.sleep(1)
+    time_left = time_left - 1
+
+subprocess.Popen([sys.executable, 'question2.py'])
+```
+
+一応実行できるのですが、処理結果がイマイチに見えるかもです。
+スレッド絡みは勉強不足なので分かる人おしえて下さい。
