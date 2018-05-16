@@ -172,7 +172,7 @@ while time_left > 0:
     time_left = time_left - 1
     print('秒経ちました')
 ```
-実行できたなら、3秒後にquestion2.pyを実行するように改良します。
+実行できたなら、3秒後にweather.pyを実行するように改良します。
 
 ```python:countdown.py
 #! python3
@@ -185,7 +185,7 @@ while time_left > 0:
     time.sleep(1)
     time_left = time_left - 1
 
-subprocess.Popen([sys.executable, 'question2.py'])
+subprocess.Popen([sys.executable, 'weather.py'])
 ```
 
 一応実行できるのですが、処理結果がイマイチに見えるかもです。
